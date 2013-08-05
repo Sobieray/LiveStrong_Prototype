@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>LIVESTRONG</title>
+		<meta name="description" content="Natural Language Form with custom text input and drop-down lists" />
+		<meta name="keywords" content="Natural Language UI, sentence form, text input, contenteditable, html5, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+    <style>
+    #hide, #hide2, #populate{
+      display: none;
+    }
+    </style>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			<header>
+				<div class="live">
+					<h1>Everyone Lives.</h1>
+				</div>
+				<div class="livestrong">
+					<h2>Some</h2><h1>Live<span>Strong</span></h1>	
+				</div>
+
+			</header>
+			<div class="main clearfix">
+				<form id="nl-form" class="nl-form" >
+					I 
+					<select id="change3">
+						<option value="1" selected>have been diagnosed with</option>
+						<option value="2">know someone with</option>
+						<option value="3">want information about</option>
+					</select>
+					cancer
+					<br />
+					<div id="hide">
+					<br /> they have
+					<select ="change2">
+						<option value="1" selected>been recently diagnosed</option>
+						<option value="2">recently started treatment</option>
+						<option value="3">been struggling with treatement</option>
+					</select>
+					
+					<br />
+				</div>
+        <div id="hide2">
+					<br />I want to 
+					<select ="change4">
+						<option value="1" selected>help them</option>
+					 	<option value="1">see others</option>
+					 	<option value="2">be more supportive</option>
+					</select>
+					on their journey
+        </div>
+					
+					<div class="nl-submit-wrap">
+						<!-- <button class="nl-submit" type="submit">info</button> -->
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+				
+			</div>
+		</div><!-- /container -->
+		<div id="populate">
+					<img src="img/Everyone_lives_02.png"/>
+				</div>
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    $('#nl-form').click(function(){
+      var x = $('#change3').val();
+      console.log(x);
+      if(x == 2){
+      $('#hide').fadeIn();
+      $('#populate').fadeIn();
+      $('#hide2').fadeIn();
+      }
+    });
+
+     
+
+
+   </script>
+
+	</body>
+</html>
